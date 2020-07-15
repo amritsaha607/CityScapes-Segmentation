@@ -1,0 +1,33 @@
+ssh -L 8888:localhost:8888 root@0.tcp.ngrok.io -p 11082
+
+kuchbhiblahblah
+
+
+sudo apt install tmux
+
+cd /root/
+mkdir .kaggle
+cd /content/drive/My\ Drive/Works/Segmentation/Cityscapes/
+cp kaggle.json /root/.kaggle/
+pip3 install -r requirements.txt
+wandb login 9276c3faf809c3a9e42ac60cf7c7ee88416d05bf
+tmux
+
+# Data
+cd /content/
+mkdir data/
+cd data/
+kaggle datasets download -d dansbecker/cityscapes-image-pairs
+unzip cityscapes-image-pairs.zip
+rm cityscapes-image-pairs.zip
+cd /content/drive/My\ Drive/Works/Segmentation/Cityscapes/utils/
+python3 makeData.py
+
+
+# Jupyter noetbook/lab for debugging (localhost:8888)
+jupyter notebook --no-browser --ip=127.0.0.1 --port=8888 --allow-root
+jupyter lab --no-browser --ip=127.0.0.1 --port=8888 --allow-root
+
+
+git config --global user.email amritsaha607@gmail.com
+
