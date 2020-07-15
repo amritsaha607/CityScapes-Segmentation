@@ -1,0 +1,16 @@
+opt_name: 'adam'
+lr: 1e-3
+b1: 0.9
+b2: 0.999
+eps: 1
+amsgrad: False
+
+n_epochs: 100
+batch_size: 8
+data_root: '/content/data/cityscapes_data'
+train_annot: 'assets/train.txt'
+val_annot: 'assets/val.txt'
+H: 256
+W: 256
+
+checkpoints: 'checkpoints/'
